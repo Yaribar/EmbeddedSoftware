@@ -9,16 +9,20 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
- *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @file stats.c
+ * @brief Statistics calculator
+ * 
+ * A simple C-Programming that exhibits a handful of basic c-programming
+ * features to show how to calculate some statistics on a set of numbers:
+ *    -median
+ *    -mean
+ *    -Maximum
+ *    -Minimum
+ * 
+ * @author Yarib Hernandez
+ * @date 2022
  *
  */
-
 
 
 #include <stdio.h>
@@ -41,3 +45,31 @@ void main() {
 }
 
 /* Add other Implementation File Code Here */
+
+void print_statistics(unsigned char data[],size_t length){ 
+
+}
+
+void print_array(unsigned char data[],size_t length){
+
+}
+
+unsigned char find_median(unsigned char data[],size_t length){
+
+}
+
+unsigned char find_mean(unsigned char data[],size_t length){
+
+}
+
+unsigned char find_minimum(unsigned char data[],size_t length){
+
+}
+
+unsigned char find_maximum(unsigned char data[],size_t length){
+
+}
+
+void sort_array(unsigned char data[],size_t length){
+
+}
