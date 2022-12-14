@@ -42,34 +42,98 @@ void main() {
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
 
+  print_array(test,sizeof(test)/sizeof(test[0]));
+  print_statistics(test,sizeof(test)/sizeof(test[0]));
+
 }
 
-/* Add other Implementation File Code Here */
-
 void print_statistics(unsigned char data[],size_t length){ 
-
+  unsigned char median = find_median(data,length);
+  unsigned char mean = find_mean(data,length);
+  unsigned char maximum = find_maximum(data,length);
+  unsigned char minimum = find_minimum(data,length);
+  printf("Minimum: %d\tMaximum: %d\tMean: %d\tMedian: %d\n",minimum,maximum,mean,median);
 }
 
 void print_array(unsigned char data[],size_t length){
-
+  for (int i = 0;i<length;i++){
+    printf("%d\n",data[i]);
+  }
 }
 
 unsigned char find_median(unsigned char data[],size_t length){
+  sort_array(data,length);
+  if(length%2){
+    return data[(length/2)+1];
+  }
+  else{
+    return (data[(length/2)+1]+data[(length/2)])/2;
+  }
 
 }
 
 unsigned char find_mean(unsigned char data[],size_t length){
-
+  unsigned char mean = 0;
+  for (int i = 0; i < length; i++)
+  {
+    mean = ((mean*i)/(1+i))+(data[i]/(1+i));
+  }
+  return mean;
+  
 }
 
 unsigned char find_minimum(unsigned char data[],size_t length){
-
+  unsigned char minimum = data[0];
+  for (int i = 0; i < length; i++)
+  {
+    if(data[i] < minimum){
+      minimum = data[i];
+    }
+  }
+  return minimum;
+  
 }
 
 unsigned char find_maximum(unsigned char data[],size_t length){
-
+  unsigned char maximum = data[0];
+  for (int i = 0; i < length; i++)
+  {
+    if(data[i] > maximum){
+      maximum = data[i];
+    }
+  }
+  return maximum;
 }
 
 void sort_array(unsigned char data[],size_t length){
+  unsigned char sorted_array[length];
+  unsigned char minimum = data[0];
+  int index = 0;
 
+  for (int j = 0; j < length; j++)
+  {
+    for (int i = 0; i < length-j; i++)
+    {
+      if(data[i] < minimum)
+      {
+        
+        index = i;
+        minimum = data[i];
+      }
+    }
+    sorted_array[j] = data[index];
+    for (int i = 0; i < length-(j+1); i++)
+    {
+      data[i]=data[(i>=index)? i+1 : i];
+    }
+    minimum = data[0];
+    index=0;
+  }
+
+  for (int i = 0; i < length; i++)
+  {
+    data[i] = sorted_array[length-i];
+  }
+  
+  
 }
