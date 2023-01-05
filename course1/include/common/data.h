@@ -9,20 +9,23 @@
  *****************************************************************************/
 /**
  * @file data.h
- * @brief 
- *
+ * @brief Data manipulation 
  *
  * @author Yarib Hernandez
  * @date January 2023
  *
  */
+#include "stdint.h"
+
 #ifndef __MEMORY_H__
 #define __MEMORY_H__
 
 /**
- * @brief 
+ * @brief Integer-to-ASCII base 2,10,16
  *
- *
+ * Converts data from standard integer type into and ASCII string
+ * The number to convert is a signed 32 bit integer, the function is able to
+ * 
  * @param 
  * @param 
  *
@@ -32,7 +35,8 @@ uint8_t my_itoa(int32_t data, uint8_t * ptr, uint32_t base);
 
 /**
  * @brief 
- *
+ * 
+ *  
  *
  * @param 
  * @param 

@@ -19,10 +19,12 @@
  * @date April 1 2017
  *
  */
+#include "stdint.h"
+#include "stdlib.h"
 
 #ifndef __MEMORY_H__
 #define __MEMORY_H__
-#include "stdlib.h"
+
 /**
  * @brief Sets a value of a data array 
  *
@@ -93,7 +95,7 @@ void clear_all(char * ptr, unsigned int size);
 
 ///////////////////////////////// NEW FUNCTIONS
 /**
- * @brief This function move the data from souce to destination handling overlaping
+ * @brief This function move the data from souce to destination, handling overlaping
  *
  *
  * @param src Byte pointer source
