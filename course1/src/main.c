@@ -20,18 +20,26 @@
  * @date April 1 2017
  *
  */
+
+
+#include "platform.h"
+#include "stdint.h"
+#include "stdlib.h"
+#include "memory.h"
+#include "course1.h"
+
+#define COURSE1
+
+#define MAX_LENGTH (10)
+char buffer[MAX_LENGTH];
+/* A pretty boring main file */
+int main(void) {
+
 #ifdef COURSE1
   course1();
 #endif
 
-#include "platform.h"
-#include "memory.h"
-
-#define MAX_LENGTH (10)
-char buffer[MAX_LENGTH];
-
-/* A pretty boring main file */
-int main(void) {
+#ifdef M2
   unsigned int i;
   char value;
 
@@ -53,6 +61,8 @@ int main(void) {
     PRINTF("%c", buffer[i]);
   }
   PRINTF("\n");
+#endif
+
   return 0;
 }
 
