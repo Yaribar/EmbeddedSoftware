@@ -20,6 +20,10 @@
  * @date April 1 2017
  *
  */
+#ifdef COURSE1
+  course1();
+#endif
+
 #include "platform.h"
 #include "memory.h"
 
