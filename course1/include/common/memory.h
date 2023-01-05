@@ -19,9 +19,10 @@
  * @date April 1 2017
  *
  */
+
 #ifndef __MEMORY_H__
 #define __MEMORY_H__
-
+#include "stdlib.h"
 /**
  * @brief Sets a value of a data array 
  *
@@ -92,77 +93,74 @@ void clear_all(char * ptr, unsigned int size);
 
 ///////////////////////////////// NEW FUNCTIONS
 /**
- * @brief 
+ * @brief This function move the data from souce to destination handling overlaping
  *
  *
- * @param 
- * @param 
+ * @param src Byte pointer source
+ * @param dst Byte pointer to destinations
+ * @param length Length of bytes to move from the source location to the destination
  *
- * @return 
+ * @return Pointer to the destintaion
  */
 uint8_t * my_memmove(uint8_t * src, uint8_t * dst, size_t length);
 
 /**
- * @brief 
+ * @brief Sourced data is copy into destination
  *
  *
- * @param 
- * @param 
+ * @param src Byte pointer source
+ * @param dst Byte pointer to destination
+ * @param length Length of bytes to move from the source location to the destination
  *
- * @return 
+ * @return Pointer to destination
  */
 uint8_t * my_memcopy(uint8_t * src, uint8_t * dst, size_t length);
 
 /**
- * @brief 
+ * @brief Set all location of the memory to a given value
  *
+ * @param src Byte pointer source
+ * @param length Length of bytes from source memory
+ * @param value Value to assign to the memory source
  *
- * @param 
- * @param 
- *
- * @return 
+ * @return Pointer to the source
  */
 uint8_t * my_memset(uint8_t * src, size_t length, uint8_t value);
 
 /**
- * @brief 
+ * @brief Zero out all the bytes in memory
  *
+ * @param src Byte pointer to memory location
+ * @param length Length in bytes of the memory
  *
- * @param 
- * @param 
- *
- * @return 
+ * @return Pointer to the source
  */
 uint8_t * my_memzero(uint8_t * src, size_t length);
 
 /**
- * @brief 
+ * @brief Reverse the order of all the bytes
  *
+ * @param src Pointer to memory location
+ * @param length Length in bytes of the memory
  *
- * @param 
- * @param 
- *
- * @return 
+ * @return Pointer to the sourcer
  */
 uint8_t * my_reverse(uint8_t * src, size_t length);
 
 /**
- * @brief 
+ * @brief Reserve dynamic memory for the number of words given
+ * and return a pointer to memory if successful, or a Null pointer if not Successful
  *
+ * @param length Number of words to allocate in dynamic memory
  *
- * @param 
- * @param 
- *
- * @return 
+ * @return Pointer to memory o null pointer
  */
 int32_t * reserve_words(size_t length);
 
 /**
- * @brief 
+ * @brief Free a dynamic memory allocation by providing the pointer src to the function
  *
- *
- * @param 
- * @param 
+ * @param src Pointer to memory source
  *
  * @return 
  */
