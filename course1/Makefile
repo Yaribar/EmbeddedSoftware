@@ -82,7 +82,7 @@ $(TARGET).asm: $(TARGET).out
  .PHONY: build
  build: $(TARGET).out $(TARGET).asm
 
-$(TARGET).out: $(OBJS) $(DEPS)
+$(TARGET).out: $(OBJS) 
 	$(CC) $(INCLUDES) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $@ 
 	$(SIZE) $(TARGET).out
 	
