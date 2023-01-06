@@ -21,7 +21,9 @@ else
 	SOURCES =		\
 		./src/main.c 	\
 		./src/memory.c 	\
-		./src/data.c
+		./src/data.c	\
+		./src/course1.c \
+		./src/stats.c
 endif
 # Add your include paths to this variable
 
