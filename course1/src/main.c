@@ -26,6 +26,7 @@
 #include "stdint.h"
 #include "stdlib.h"
 #include "memory.h"
+#include "stats.h"
 #include "course1.h"
 
 #define COURSE1
