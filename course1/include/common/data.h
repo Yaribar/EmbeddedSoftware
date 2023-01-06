@@ -15,10 +15,10 @@
  * @date January 2023
  *
  */
-#include "stdint.h"
+#include <stdint.h>
 
-#ifndef __MEMORY_H__
-#define __MEMORY_H__
+#ifndef __DATA_H__
+#define __DATA_H__
 
 /**
  * @brief Integer-to-ASCII base 2,10,16

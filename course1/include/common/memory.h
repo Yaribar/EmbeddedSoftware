@@ -19,7 +19,7 @@
  * @date April 1 2017
  *
  */
-#include "stdint.h"
+#include <stdint.h>
 #include "stdlib.h"
 
 #ifndef __MEMORY_H__
@@ -166,6 +166,6 @@ int32_t * reserve_words(size_t length);
  *
  * @return 
  */
-void free_words(int32_t * src);
+void free_words(uint32_t * src);
 
 #endif /* __MEMORY_H__ */
