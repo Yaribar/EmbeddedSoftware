@@ -31,7 +31,7 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
-void main() {
+/*void main() {
 
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
@@ -39,13 +39,10 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
-
   print_array(test,sizeof(test)/sizeof(test[0]));
   print_statistics(test,sizeof(test)/sizeof(test[0]));
 
-}
+}*/
 
 void print_statistics(unsigned char data[],size_t length){ 
   unsigned char median = find_median(data,length);
@@ -56,9 +53,11 @@ void print_statistics(unsigned char data[],size_t length){
 }
 
 void print_array(unsigned char data[],size_t length){
+#ifdef VERBOSE
   for (int i = 0;i<length;i++){
-    printf("%d\n",data[i]);
+    PRINTF("%d\n",data[i]);
   }
+#endif
 }
 
 unsigned char find_median(unsigned char data[],size_t length){
